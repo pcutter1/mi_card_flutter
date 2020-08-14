@@ -9,37 +9,38 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Container(
-                height: 100.0,
-                width: 200.0,
-                color: Colors.orangeAccent,
-                child: Text('Container 1'),
-              ),
-              SizedBox(
-                height: 20,
+                height: double.infinity,
+                width: 100.0,
+                color: Colors.red,
               ),
               Container(
-                height: 100.0,
-                width: 200.0,
-                color: Colors.lightBlueAccent,
-                child: Text('Container 2'),
-              ),
-              SizedBox(height: 20,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      height: 100.0,
+                      width: 100.0,
+                      color: Colors.yellow,
+                    ),
+                    Container(
+                      height: 100.0,
+                      width: 100.0,
+                      color: Colors.green,
+                    ),
+                  ],
+                ),
               ),
               Container(
-                height: 100.0,
-                width: 200.0,
-                color: Colors.deepPurpleAccent,
-                child: Text('Container 3'),
+                height: double.infinity,
+                width: 100.0,
+                color: Colors.blue,
               ),
-              Container(
-                width: double.infinity,
-              )
             ],
           ),
         ),
