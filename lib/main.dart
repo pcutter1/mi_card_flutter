@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,37 +10,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.grey[300],
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
             children: <Widget>[
-              Container(
-                height: double.infinity,
-                width: 100.0,
-                color: Colors.red,
+              CircleAvatar(
+                backgroundImage: AssetImage('images/flamenco_night.jpg'),
+                radius: 50.0,
               ),
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Container(
-                      height: 100.0,
-                      width: 100.0,
-                      color: Colors.yellow,
-                    ),
-                    Container(
-                      height: 100.0,
-                      width: 100.0,
-                      color: Colors.green,
-                    ),
-                  ],
+              Text(
+                'Paul Quitzau Cutter',
+                style: TextStyle(
+                  fontFamily: 'Barcode',
+                  fontSize: 30.0,
                 ),
-              ),
-              Container(
-                height: double.infinity,
-                width: 100.0,
-                color: Colors.blue,
               ),
             ],
           ),
