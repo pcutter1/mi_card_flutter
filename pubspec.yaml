@@ -29,3 +29,6 @@ flutter:
     - family: Barcode
       fonts:
         - asset: fonts/LibreBarcode39Text-Regular.ttf
+    - family: Roboto Mono
+      fonts:
+        - asset: fonts/RobotoMono-VariableFont_wght.ttf
