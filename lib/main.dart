@@ -10,9 +10,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.grey[300],
+        backgroundColor: Colors.grey[200],
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 backgroundImage: AssetImage('images/flamenco_night.jpg'),
@@ -39,47 +40,40 @@ class MyApp extends StatelessWidget {
               ),
               SizedBox(
                 height: 30.0,
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                padding: EdgeInsets.all(10.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.phone,
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      '505.401.8656',
-                      style: TextStyle(
-                        fontFamily: 'Roboto Mono',
-                        fontSize: 20,
-                      ),
-                    ),
-                  ],
+                width: 150.0,
+                child: Divider(
+                  color: Colors.grey,
                 ),
               ),
-              Container(
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                padding: EdgeInsets.all(10.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.email,
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.phone,
+                      color: Colors.black,
                     ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      'pcutter@gmail.com',
+                    title: Text('505.401.8656',
                       style: TextStyle(
                         fontFamily: 'Roboto Mono',
                         fontSize: 20,
                       ),
                     ),
-                  ],
+                  ),
+                ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.black,
+                  ),
+                  title: Text(
+                    'pcutter@gmail.com',
+                    style: TextStyle(
+                      fontFamily: 'Roboto Mono',
+                      fontSize: 20.0
+                    ),
+                  ),
                 ),
               ),
             ],
